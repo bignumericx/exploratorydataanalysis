@@ -30,8 +30,11 @@ par(new=TRUE)
 with(epcdata, plot(epcdata$Date, epcdata$Sub_metering_2, xlab=NA, ylab=NA, type="l", col="red", 
                    ylim=c(0, max(epcdata$Sub_metering_1)), axes=FALSE))
 par(new=TRUE)
-with(epcdata, plot(epcdata$Date, epcdata$Sub_metering_3, xlab=NA, ylab="Energy sub metering", type="l", col="blue", ylim=c(0, max(epcdata$Sub_metering_1)), axes=FALSE))
+with(epcdata, plot(epcdata$Date, epcdata$Sub_metering_3, xlab=NA, ylab="Energy sub metering", type="l", col="blue", 
+                   ylim=c(0, max(epcdata$Sub_metering_1)), axes=FALSE))
 legend("topright", lty=1 , col=c("black", "red", "blue"), legend=c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"))
+
+#Close the png file device
 dev.off()
 
 #Clear the workspace
