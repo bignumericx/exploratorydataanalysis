@@ -34,13 +34,18 @@ with(epcdata,
   {
     plot(epcdata$Date, epcdata$Sub_metering_1, xlab=NA, ylab=NA, type="l", col="black")
     par(new=TRUE)
-    plot(epcdata$Date, epcdata$Sub_metering_2, xlab=NA, ylab=NA, type="l", col="red", ylim=c(0, max(epcdata$Sub_metering_1)), axes=FALSE)
+    plot(epcdata$Date, epcdata$Sub_metering_2, xlab=NA, ylab=NA, type="l", col="red", 
+         ylim=c(0, max(epcdata$Sub_metering_1)), axes=FALSE)
     par(new=TRUE)
-    plot(epcdata$Date, epcdata$Sub_metering_3, xlab=NA, ylab="Energy sub metering", type="l", col="blue", ylim=c(0, max(epcdata$Sub_metering_1)), axes=FALSE)
-    legend("topright", lty=1 , col=c("black", "red", "blue"), bty="n", legend=c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"))
+    plot(epcdata$Date, epcdata$Sub_metering_3, xlab=NA, ylab="Energy sub metering", type="l", col="blue", 
+         ylim=c(0, max(epcdata$Sub_metering_1)), axes=FALSE)
+    legend("topright", lty=1 , col=c("black", "red", "blue"), bty="n", 
+           legend=c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"))
   });
   plot(epcdata$Date, epcdata$Global_reactive_power, xlab="datetime", ylab="Global_reactive_power", type="l")
 })
+
+#Close the png file device
 dev.off()
 
 #Clear the workspace
