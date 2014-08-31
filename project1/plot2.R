@@ -26,6 +26,8 @@ png(filename="plot2.png", width=480, height=480, units="px")
 
 #Create the scatter plot
 plot(epcdata$Date, epcdata$Global_active_power, xlab=NA, ylab="Global Active Power (kilowatts)", type="l")
+
+#Close the png file device
 dev.off()
 
 #Clear the workspace
