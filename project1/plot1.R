@@ -1,7 +1,7 @@
 ###########################
 #File: plot1.R            #
 #Author: Steeve Brechmann #
-#Date: 22AUG2014          #
+#Date: 31AUG2014          #
 ###########################
 
 #Clear the workspace
@@ -25,7 +25,10 @@ rm(rawdata)
 png(filename="plot1.png", width=480, height=480, units="px")
 
 #Create the histogram
-hist(epcdata$Global_active_power, col="red", xlab="Global Active Power (kilowatts)", main="Global Active Power", ylim=c(0, 1200))
+hist(epcdata$Global_active_power, col="red", xlab="Global Active Power (kilowatts)", main="Global Active Power", 
+     ylim=c(0, 1200))
+     
+#Close the png file device
 dev.off()
 
 #Clear the workspace
