@@ -1,7 +1,7 @@
 ###########################
 #File: plot1.R            #
 #Author: Steeve Brechmann #
-#Date: 31AUG2014          #
+#Date: 01SEP2014          #
 ###########################
 
 #Clear the workspace
